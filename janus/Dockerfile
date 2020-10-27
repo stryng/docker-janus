@@ -19,7 +19,13 @@ RUN apt install -y \
       libssl-dev libsofia-sip-ua-dev libglib2.0-dev \
       libopus-dev libogg-dev libcurl4-openssl-dev liblua5.3-dev \
       libconfig-dev pkg-config gengetopt libtool automake \
-      libnice-dev libsrtp2-dev libwebsockets-dev
+      libnice-dev libsrtp2-dev libwebsockets-dev \
+      libsrtp-dev libsofia-sip-ua-dev libglib2.0-dev libopus-dev \
+      libogg-dev libini-config-dev libcollection-dev libwebsockets-dev \
+      pkg-config gengetopt automake libtool doxygen graphviz git cmake 
+
+RUN apt install -y \
+	libssl1.0-dev libavformat-dev
 
 RUN git clone https://github.com/sctplab/usrsctp \
 && cd usrsctp \

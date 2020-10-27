@@ -2,10 +2,12 @@ version: "3"
 
 services:
   janus:
-#    build: ./janus
+    build: ./janus
 
-    container_name: janus_gateway
-    image: mcroth/docker-janus:latest
+    container_name: docker-janus
+#    image: stryng/d-j:v1
+    environment:
+    - LD_LIBRARY_PATH=/usr/local/lib 
     ports:
       - 8088:8088
       - 8188:8188
